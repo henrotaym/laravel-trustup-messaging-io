@@ -1,7 +1,7 @@
 <?php
-namespace Henrotaym\VersioningPackageTemplate\Tests\Feature;
+namespace Henrotaym\LaravelTrustupMessagingIo\Tests\Feature;
 
-use Henrotaym\VersioningPackageTemplate\Tests\TestCase;
+use Henrotaym\LaravelTrustupMessagingIo\Tests\TestCase;
 
 class ExampleFeatureTest extends TestCase
 {

@@ -1,13 +1,27 @@
 <?php
-namespace Henrotaym\VersioningPackageTemplate;
+namespace Henrotaym\LaravelTrustupMessagingIo;
 
-use Henrotaym\VersioningPackageTemplate\Contracts\PackageContract;
+use Henrotaym\LaravelTrustupMessagingIo\Contracts\PackageContract;
 use Henrotaym\LaravelPackageVersioning\Services\Versioning\VersionablePackage;
 
 class Package extends VersionablePackage implements PackageContract
 {
     public static function prefix(): string
     {
-        return "versioning_package_template";
+        return "laravel_trustup_messaging_io";
+    }
+
+    public function getAppKey(): string
+    {
+        $key = $this->getConfig('messaging.app_key');
+        
+        return app()->environment('production') ?
+            $key
+            : "$key-" . app()->environment();
+    }
+
+    public function getApiUrl(): string
+    {
+        return $this->getConfig('messaging.api');
     }
 }

@@ -1,5 +1,5 @@
 {
-    "name": "henrotaym/versioning-package-template",
+    "name": "henrotaym/laravel-trustup-messaging-io",
     "description": "Basic versioned php package.",
     "type": "library",
     "license": "MIT",
@@ -18,18 +18,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Henrotaym\\VersioningPackageTemplate\\": "src"
+            "Henrotaym\\LaravelTrustupMessagingIo\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Henrotaym\\VersioningPackageTemplate\\Tests\\": "tests"
+            "Henrotaym\\LaravelTrustupMessagingIo\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Henrotaym\\VersioningPackageTemplate\\Providers\\VersioningPackageTemplateServiceProvider"
+                "Henrotaym\\LaravelTrustupMessagingIo\\Providers\\LaravelTrustupMessagingIoServiceProvider"
             ]
         }
     }
