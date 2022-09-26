@@ -11,8 +11,8 @@ composer require henrotaym/laravel-trustup-messaging-io
 Add these information to your `.env` file.
 
 ```dotenv
-MESSAGING_TRUSTUP_API_URL=
-MESSAGING_TRUSTUP_APP_KEY=
+TRUSTUP_MESSAGING_API_URL=
+TRUSTUP_MESSAGING_APP_KEY=
 ```
 
 ### Preparing your models

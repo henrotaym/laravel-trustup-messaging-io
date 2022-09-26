@@ -2,7 +2,7 @@
 
 return [
     "messaging" => [
-        "api" => env('MESSAGING_TRUSTUP_API_URL'),
-        "app_key" => env('MESSAGING_TRUSTUP_APP_KEY')
+        "api" => env('TRUSTUP_MESSAGING_API_URL'),
+        "app_key" => env('TRUSTUP_MESSAGING_APP_KEY')
     ]
 ];
