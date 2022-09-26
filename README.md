@@ -15,6 +15,32 @@ TRUSTUP_MESSAGING_API_URL=
 TRUSTUP_MESSAGING_APP_KEY=
 ```
 
+### Preparing your models morph type (optional).
+
+Define your morph types in an `service provider` like `AppServiceProvider` for example.
+
+```php
+use App\Models\YourModel;
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Relations\Relation;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        Relation::enforceMorphMap([
+            'your-model' => YourModel::class,
+        ]);
+    }
+}
+```
+
+
 ### Preparing your models
 
 Your model should look like this

@@ -1,8 +1,9 @@
 <?php
 namespace Henrotaym\LaravelTrustupMessagingIo\Models\Traits;
 
-use Henrotaym\LaravelTrustupMessagingIo\Facades\Package;
+use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
+use Henrotaym\LaravelTrustupMessagingIo\Facades\Package;
 
 /**
  * @var Model $this
@@ -15,7 +16,7 @@ trait IsMessagingIoModel
     public function getTrustupMessagingIoModelType(): string
     {
         /** @var Model $this */
-        return $this->getMorphClass();
+        return Str::slug(str_replace('\\', '-', $this->getMorphClass()));
     }
 
     /**
