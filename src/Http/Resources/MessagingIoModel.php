@@ -3,6 +3,7 @@ namespace Henrotaym\LaravelTrustupMessagingIo\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use Henrotaym\LaravelTrustupMessagingIo\Contracts\Models\MessagingIoModelContract;
+use Illuminate\Http\Request;
 
 abstract class MessagingIoModel extends JsonResource
 {
@@ -12,7 +13,7 @@ abstract class MessagingIoModel extends JsonResource
     public function toArray($request)
     {
         return [
-            ...$this->getAttributes(),
+            ...$this->getAttributes($request),
             'trustup_io_messaging' => $this->getMessagingIoAttributes()
         ];
     }
@@ -33,5 +34,5 @@ abstract class MessagingIoModel extends JsonResource
     }
 
     /** Getting resource attributes. */
-    abstract protected function getAttributes(): array;
+    abstract protected function getAttributes(Request $request): array;
 }

@@ -36,10 +36,11 @@ Your resource exposing your model shoud look like this
 
 ```php
 use Henrotaym\LaravelTrustupMessagingIo\Http\Resources\MessagingIoModel;
+use Illuminate\Http\Request;
 
 class MyResource extends MessagingIoModel
 {
-    protected function getAttributes(): array
+    protected function getAttributes(Request $request): array
     {
         // Define your attributes here.
     }
