@@ -48,8 +48,11 @@ trait IsMessagingIoModel
             return null;
         endif;
 
-        return $user?->getId() ??
-            $user->id;
+        if (method_exists($user, 'getId')):
+            return $user->getId();
+        endif;
+
+        return $user->id;
     }
 
     /**
