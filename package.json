@@ -1,6 +1,6 @@
 {
     "name": "laravel-trustup-messaging-io",
-    "version": "0.0.6",
+    "version": "1.0.0",
     "main": "index.js",
     "repository": "git@github.com:henrotaym/laravel-trustup-messaging-io.git",
     "author": "Mathieu Henrotay <mathieu.henrotay@gmail.com>",
